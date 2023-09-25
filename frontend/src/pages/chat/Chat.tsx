@@ -87,11 +87,15 @@ const Chat = () => {
     
     const getUserInfoList = async () => {
         const userInfoList = await getUserInfo();
+        console.log("hello");
+        console.log(userInfoList);
         if (userInfoList.length === 0 && window.location.hostname !== "127.0.0.1") {
             setShowAuthMessage(false);
+            console.log("if");
         }
         else {
             setShowAuthMessage(false);
+            console.log("else");
         }
     }
 
