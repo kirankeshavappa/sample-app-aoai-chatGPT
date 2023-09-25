@@ -19,9 +19,10 @@ export async function conversationApi(options: ConversationRequest, abortSignal:
 export async function getUserInfo(): Promise<UserInfo[]> {
     const response = await fetch('/.auth/me');
     if (!response.ok) {
+        console.log("Kiran");
         console.log("No identity provider found. Access to chat will be blocked.")
         console.log("first");
-        return [{user: "Kiran"}];
+        return [];
     }
 
     const payload = await response.json();
